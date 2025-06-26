@@ -4,37 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Great Pacific Group</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+    }
+    .logo span {
+      background: #ccc;
+      color: #000;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      margin-right: 0.5rem;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+    .hero {
+      position: relative;
+      background-image: url('3b22a887-1b53-423a-9c3f-b3467429d315.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 5%;
+    }
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero a {
+      background: #111;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    section {
+      padding: 3rem 5%;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
+  <header>
+    <div class="logo"><span>GPG</span> GREAT PACIFIC GROUP</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#contract">Contract info</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Navbar -->
-  <nav class="flex items-center justify-between p-6 bg-gray-800">
-    <div class="text-xl font-bold">
-      <img src="/logo.png" alt="Great Pacific Group Logo" class="h-10 w-auto" />
-    </div>
-    <div class="space-x-6 text-sm font-semibold text-blue-400">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#capabilities" class="hover:text-white">Capabilities</a>
-      <a href="#contract" class="hover:text-white">Contract Info</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1588776814546-ec7b44f84c1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80');">
-    <div class="bg-black bg-opacity-60 p-10 rounded-lg text-center max-w-2xl">
-      <h1 class="text-4xl font-bold mb-4">Medical Staffing for the Federal Government</h1>
-      <p class="text-lg text-gray-300">
-        Nationwide service. Long-term and short-term contracts. Hard-to-fill positions covered.
-      </p>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Trusted Healthcare Staffing for Federal Agencies</h1>
+      <p>Nationwide. Fast. Compliant.</p>
+      <a href="#contact">Contact Us</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-900 py-4 text-center text-white text-sm">
-    &copy; 2025 Great Pacific Group. All rights reserved.
-  </footer>
+  <section id="about">
+    <h2>About</h2>
+    <p>Great Pacific Group is a small business providing medical staffing services to the Federal Government. We are a one-stop shop, quickly filling both short and long-term positions across the country.</p>
+  </section>
 
+  <section id="capabilities">
+    <h2>Capabilities</h2>
+    <div class="capabilities">
+      <div>
+        <h3>Physicians</h3>
+        <ul>
+          <li>Primary Care</li>
+          <li>Specialists</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nursing</h3>
+        <ul>
+          <li>Registered Nurses</li>
+          <li>Nurse Practitioners</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Allied Health</h3>
+        <ul>
+          <li>Technicians</li>
+          <li>Therapists</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Administrative</h3>
+        <ul>
+          <li>Medical Assistants</li>
+          <li>Coders</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
