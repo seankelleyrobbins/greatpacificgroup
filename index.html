@@ -25,34 +25,28 @@
     header img {
       height: 60px;
     }
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('Hero%20image.png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+   .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('Hero%20image.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 60px;
     }
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* darken for contrast */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-      color: #fff;
+   .hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  color: #fff;
+  max-width: 600px;
+  text-align: left;
     }
     .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
     }
     .hero h2 {
       font-size: 1.5rem;
@@ -99,7 +93,7 @@
 
   <section class="hero">
     <div class="hero-overlay">
-      <h1>Trusted staffing for federal agencies</h1>
+     <h1>Trusted Staffing for Federal Agencies</h1>
       <h2>Nationwide. Fast. Compliant.</h2>
       <a href="#contact" class="cta-button">Contact Us</a>
     </div>
