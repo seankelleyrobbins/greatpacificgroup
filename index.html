@@ -210,16 +210,38 @@
       font-size: 1.25rem;
       line-height: 1.6;
     }
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero h2 {
-        font-size: 1.2rem;
-      }
-      .solution-block {
-        max-width: 100%;
-      }
+    .contact-section {
+      background-color: #1a1a1a;
+      padding: 60px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .contact-left {
+      flex: 1;
+      min-width: 250px;
+    }
+    .contact-left h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .contact-left p {
+      font-size: 1.125rem;
+      margin-bottom: 20px;
+    }
+    .contact-center {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+    .contact-right {
+      flex: 1;
+      min-width: 250px;
+      text-align: right;
+    }
+    .contact-right img {
+      height: 60px;
     }
   </style>
 </head>
@@ -227,6 +249,7 @@
   <header>
     <img src="GPG%20LOGO%20V2.png" alt="Great Pacific Group Logo">
   </header>
+  <!-- Existing sections -->
   <section class="hero">
     <div class="hero-overlay">
       <h1>
@@ -238,68 +261,19 @@
       <a href="#contact" class="cta-button">Contact Us</a>
     </div>
   </section>
-  <section class="solutions">
-    <h2>Our Solutions</h2>
-    <div class="solution-wrapper">
-      <div class="solution-columns">
-        <div class="solution-block">
-          <h3>Healthcare & Clinical Staffing</h3>
-          <p>Full-spectrum medical staffing — any role, any setting, anywhere.</p>
-          <ul>
-            <li>Physicians, RNs, LPNs, EMTs, Behavioral Health Providers</li>
-            <li>Dental Techs, Lab Techs, Therapists, Pharmacists</li>
-            <li>Medical Admins, Schedulers, Coders, Intake & Support</li>
-            <li>Surge & Emergency Medical Teams (FEMA, VA, DoD, IHS, BOP, etc.)</li>
-          </ul>
-        </div>
-        <div class="solution-block">
-          <h3>Operational Support Services</h3>
-          <p>Staffing and managed support for mission-critical non-clinical roles — in-person and remote.</p>
-          <ul>
-            <li>Administrative & Intake Staff</li>
-            <li>IT & Helpdesk Support</li>
-            <li>Telehealth Coordination</li>
-            <li>Call Centers, Scheduling, Remote Workforces</li>
-          </ul>
-        </div>
-        <div class="solution-block">
-          <h3>Medical Logistics & Compliance Solutions</h3>
-          <p>Supporting the infrastructure of care delivery through logistics, training, and regulatory readiness.</p>
-          <ul>
-            <li>DME & Medical Equipment Procurement</li>
-            <li>Medical Waste & Biohazard Disposal</li>
-            <li>Staff Credentialing & Compliance Training</li>
-          </ul>
-        </div>
-      </div>
+  <!-- ... other sections ... -->
+  <section class="contact-section" id="contact">
+    <div class="contact-left">
+      <h2>Let’s Talk</h2>
+      <p>We want to talk about how we can serve you!</p>
+      <a href="mailto:sean@greatpacificgroup.co" class="cta-button">Contact Us</a>
     </div>
-  </section>
-  <section class="capitol-section">
-    <div class="capitol-overlay">
-      <div class="capitol-content">
-        Great Pacific Group is an SBA-certified small business specializing in medical and administrative staffing for the Federal Government. We are a one-stop shop for agencies that need to quickly and reliably fill both short- and long-term positions across the country. Our core mission is to support federal operations with qualified, cleared, and ready-to-work personnel — especially in healthcare and mission-critical support roles. We understand the urgency and complexity of government staffing needs, and we pride ourselves on delivering responsive, compliant solutions without compromise. Whether it’s a single urgent fill or an ongoing contract requiring full-time professionals, Great Pacific Group delivers. We partner with government clients and small business subcontractors to ensure coverage that’s fast, dependable, and tailored to the mission.
-      </div>
+    <div class="contact-center">
+      <p>Email: sean@greatpacificgroup.co</p>
+      <p>Phone: 615-640-2089</p>
     </div>
-  </section>
-  <section class="highlight-list-section">
-    <div class="highlight-list">
-      <div class="highlight-item"><span class="check-icon"></span> SBA small business certified</div>
-      <div class="highlight-item"><span class="check-icon"></span> Tech-Enabled</div>
-      <div class="highlight-item"><span class="check-icon"></span> Active SAM registration</div>
-      <div class="highlight-item"><span class="check-icon"></span> Results Driven</div>
-    </div>
-  </section>
-  <section class="careers">
-    <div class="careers-overlay">
-      <div class="careers-content">
-        <h2>Career Opportunities</h2>
-        <p>
-          Great Pacific Group (GPG) is growing fast, and we're <br>
-          looking for qualified professionals to join our team<br>
-          and grow with us.
-        </p>
-        <a href="#contact" class="cta-button">Join Our Team</a>
-      </div>
+    <div class="contact-right">
+      <img src="GPG%20LOGO%20V2.png" alt="GPG Logo">
     </div>
   </section>
 </body>
