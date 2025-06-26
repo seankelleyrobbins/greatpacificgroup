@@ -1,177 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Great Pacific Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #111;
+      padding: 0;
     }
-
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+    }
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      z-index: 2;
     }
-
     header img {
-      height: 36px;
+      height: 60px;
     }
-
-    nav a {
-      margin-left: 2rem;
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-    }
-
     .hero {
       position: relative;
-      background: url('hero.jpg') no-repeat center center/cover;
-      height: 500px;
-      color: white;
+      width: 100%;
+      height: 100vh;
+      background: url('Hero%20image.png') no-repeat center center/cover;
       display: flex;
       align-items: center;
-      padding: 0 2rem;
+      justify-content: center;
     }
-
-    .hero::before {
-      content: '';
+    .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.4); /* darken for contrast */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      color: #fff;
     }
-
-    .hero-content {
-      position: relative;
-      max-width: 600px;
-    }
-
     .hero h1 {
       font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
-
-    .hero p {
-      font-size: 1.125rem;
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
       margin-bottom: 1.5rem;
     }
-
-    .hero button {
-      background-color: #0f172a;
-      color: #fff;
+    .cta-button {
+      background-color: #3B82F6;
+      color: white;
+      padding: 12px 24px;
       border: none;
-      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
       font-size: 1rem;
-      border-radius: 0.375rem;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background-color: #2563EB;
     }
 
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .section p {
+    section.intro {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
       font-size: 1.125rem;
-      margin-bottom: 2rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-    }
-
-    .grid h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-    }
-
-    .grid ul {
-      list-style-type: disc;
-      padding-left: 1rem;
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero h2 {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <img src="logo.svg" alt="Great Pacific Group logo">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#contract">Contract info</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <img src="GPG%20Logo.png" alt="Great Pacific Group Logo">
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Trusted Healthcare Staffing for Federal Agencies</h1>
-      <p>Nationwide. Fast. Compliant.</p>
-      <button>Contact Us</button>
+    <div class="hero-overlay">
+      <h1>Trusted staffing for federal agencies</h1>
+      <h2>Nationwide. Fast. Compliant.</h2>
+      <a href="#contact" class="cta-button">Contact Us</a>
     </div>
   </section>
 
-  <section id="about" class="section">
-    <h2>About</h2>
-    <p>Great Pacific Group is a small business providing medical staffing services to the Federal Government. We are a one-stop shop, quickly filling both short and long-term positions across the country.</p>
+  <section class="intro">
+    <p>
+      Great Pacific Group is an SBA certified small business providing staffing services to the Federal Government.
+      We are a one-stop shop, quickly filling both short and long term positions around the country.
+    </p>
   </section>
 
-  <section id="capabilities" class="section">
-    <h2>Capabilities</h2>
-    <div class="grid">
-      <div>
-        <h3>Physicians</h3>
-        <ul>
-          <li>Primary Care</li>
-          <li>Specialists</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Nursing</h3>
-        <ul>
-          <li>Registered Nurses</li>
-          <li>Nurse Practitioners</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Allied Health</h3>
-        <ul>
-          <li>Technicians</li>
-          <li>Therapists</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Administrative</h3>
-        <ul>
-          <li>Medical Assistants</li>
-          <li>Coders</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 </body>
-
 </html>
