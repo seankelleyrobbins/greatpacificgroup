@@ -7,8 +7,9 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #111;
     }
 
     header {
@@ -16,45 +17,57 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background: #ffffff;
+      background: #fff;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    header img {
-      height: 50px;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .logo span {
+      margin-left: 0.5rem;
+      letter-spacing: 1px;
     }
 
     nav a {
-      margin-left: 20px;
+      margin-left: 2rem;
       text-decoration: none;
-      color: #333;
+      color: #222;
       font-weight: 500;
     }
 
     .hero {
-      background: url('hero.jpg') no-repeat center center;
+      background-image: url('hero.jpg');
       background-size: cover;
-      color: white;
-      text-align: center;
+      background-position: center;
+      background-repeat: no-repeat;
       padding: 120px 20px;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
     }
 
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      margin: 0 0 1rem;
+      font-weight: 700;
     }
 
     .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .hero a {
-      background: #005ea2;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 5px;
+    .btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
       text-decoration: none;
+      border-radius: 5px;
       font-weight: bold;
     }
 
@@ -65,65 +78,22 @@
     }
 
     h2 {
-      color: #005ea2;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
-    footer {
-      background: #f4f4f4;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
     }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="GPG Logo.png" alt="Great Pacific Group Logo" />
-    <nav>
-      <a href="#about">About</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Medical Staffing for Federal Agencies</h1>
-    <p>Experienced, credentialed professionals delivered fast — Great Pacific Group is your one-stop healthcare staffing partner.</p>
-    <a href="#contact">Contact Us</a>
-  </section>
+    ul {
+      padding-left: 1.2rem;
+    }
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p><strong>Great Pacific Group LLC</strong> is a small business providing medical staffing services to federal agencies. We specialize in matching qualified professionals with the unique needs of government healthcare facilities.</p>
-    <p>We are based in Hawaii and serve contracts nationwide. Our team finds and places candidates for even the hardest-to-fill positions — efficiently and reliably.</p>
-  </section>
-
-  <section id="capabilities">
-    <h2>Capabilities</h2>
-    <p>We provide staffing solutions for all major clinical and administrative roles, including:</p>
-    <ul>
-      <li><strong>Physicians:</strong> Primary care, psychiatry, specialty care</li>
-      <li><strong>Nurses:</strong> RNs, LPNs, nurse practitioners</li>
-      <li><strong>Allied Health:</strong> Therapists, techs, pharmacists</li>
-      <li><strong>Admin & Support:</strong> Medical admin, coders, clerks</li>
-    </ul>
-    <p>We staff for both short-term and long-term needs — no emergency response. We’re built to solve your toughest personnel challenges.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:sean@greatpacificgroup.co">sean@greatpacificgroup.co</a></p>
-    <p><strong>Phone:</strong> 615-640-2089</p>
-    <p><strong>UEI:</strong> H91VXAMYNZ85</p>
-    <p><strong>DUNS:</strong> 119458452</p>
-    <p><strong>CAGE:</strong> 0QJG9</p>
-    <p><strong>NAICS:</strong> 561320, 621111, 621112, 621399, 621610, 621999, 622110, 623110</p>
-    <p><strong>PSC Codes:</strong> Q201, Q301, Q401, Q999</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Great Pacific Group. All rights reserved.
-  </footer>
-</body>
-</html>
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
