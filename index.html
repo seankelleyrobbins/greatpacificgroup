@@ -6,261 +6,52 @@
   <title>Great Pacific Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Source Sans 3', sans-serif;
-      line-height: 1.6;
-      color: #fff;
-      background-color: #1a1a1a;
-    }
-    header {
-      position: absolute;
-      top: 20px;
-      left: 40px;
-      z-index: 2;
-    }
-    header img {
-      height: 60px;
-    }
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('Hero%20image.png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding-left: 60px;
-    }
-    .hero-overlay {
-      padding: 20px;
-      color: #fff;
-      max-width: 600px;
-      text-align: left;
-    }
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      color: #fff;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-    h1, h2, h3 {
-      color: #3DB2FF;
-    }
-    .hero h1, .hero h2 {
-      color: #fff;
-    }
-    .cta-button {
-      background-color: #FF7A59;
-      color: white;
-      padding: 13px 25px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .cta-button:hover {
-      background-color: #e55e3c;
-    }
-    section.intro {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      font-size: 1.125rem;
-    }
-    .solutions h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-    .solution-wrapper {
-      margin-bottom: 40px;
-    }
-    .solution-columns {
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .solution-block {
-      flex: 1;
-      min-width: 250px;
-      max-width: 32%;
-      text-align: left;
-      background-color: #262626;
-      padding: 20px;
-      border: 1px solid #444;
-      border-radius: 8px;
-    }
-    .solution-block h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-    .solution-block p {
-      margin-bottom: 60px;
-    }
-    .solution-block ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    .capitol-section {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      background: url('Capitol2.jpg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .capitol-overlay {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-    }
-    .capitol-content {
-      max-width: 1000px;
-      color: #fff;
-      font-size: 1.125rem;
-      text-align: center;
-    }
-    .highlight-list-section {
-      background-color: #1a1a1a;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .highlight-list {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    .highlight-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.2rem;
-    }
-    .check-icon {
-      width: 24px;
-      height: 24px;
-      background-color: #3DB2FF;
-      border-radius: 50%;
-      display: inline-block;
-      position: relative;
-    }
-    .check-icon::after {
-      content: '✔';
-      color: white;
-      font-size: 14px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .careers {
-      position: relative;
-      width: 100%;
-      height: 70vh;
-      background: url('Career%20Opportunities.png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-    .careers-overlay {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 60px;
-    }
-    .careers-content {
-      max-width: 500px;
-      color: #fff;
-      text-align: right;
-    }
-    .careers-content h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .careers-content p {
-      font-size: 1.25rem;
-      line-height: 1.6;
-    }
-    .contact-section {
-      background-color: #1a1a1a;
-      padding: 40px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contact-left h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #3DB2FF;
-    }
-    .contact-left p {
-      margin-bottom: 20px;
-    }
-    .contact-button {
-      background-color: #FF7A59;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .contact-center {
-      text-align: center;
-      font-size: 1.1rem;
-    }
-    .contact-right img {
-      height: 60px;
-    }
+    /* (All CSS unchanged) */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; line-height: 1.6; color: #fff; background-color: #1a1a1a; }
+    header { position: absolute; top: 20px; left: 40px; z-index: 2; }
+    header img { height: 60px; }
+    .hero { position: relative; width: 100%; height: 100vh; background: url('Hero%20image.png') no-repeat center center/cover; display: flex; align-items: center; justify-content: flex-start; padding-left: 60px; }
+    .hero-overlay { padding: 20px; color: #fff; max-width: 600px; text-align: left; }
+    .hero h1 { font-size: 4rem; font-weight: 600; margin-bottom: 1rem; line-height: 1.1; color: #fff; }
+    .hero h2 { font-size: 2rem; font-weight: 400; margin-bottom: 1.5rem; color: #fff; }
+    h1, h2, h3 { color: #3DB2FF; }
+    .hero h1, .hero h2 { color: #fff; }
+    .cta-button { background-color: #FF7A59; color: white; padding: 13px 25px; border: none; border-radius: 6px; font-size: 1.5rem; cursor: pointer; transition: background-color 0.3s ease; text-decoration: none; display: inline-block; margin-top: 20px; }
+    .cta-button:hover { background-color: #e55e3c; }
+    section.intro { padding: 60px 20px; max-width: 1200px; margin: 0 auto; font-size: 1.125rem; }
+    .solutions h2 { font-size: 2.5rem; text-align: center; margin-top: 60px; margin-bottom: 30px; }
+    .solution-wrapper { margin-bottom: 40px; }
+    .solution-columns { display: flex; gap: 30px; justify-content: space-between; flex-wrap: wrap; }
+    .solution-block { flex: 1; min-width: 250px; max-width: 32%; text-align: left; background-color: #262626; padding: 20px; border: 1px solid #444; border-radius: 8px; }
+    .solution-block h3 { font-size: 1.5rem; margin-bottom: 10px; }
+    .solution-block p { margin-bottom: 60px; }
+    .solution-block ul { list-style-type: disc; margin-left: 20px; }
+    .capitol-section { position: relative; width: 100%; height: 60vh; background: url('Capitol2.jpg') no-repeat center center/cover; display: flex; align-items: center; justify-content: center; }
+    .capitol-overlay { width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; padding: 40px; }
+    .capitol-content { max-width: 1000px; color: #fff; font-size: 1.125rem; text-align: center; }
+    .highlight-list-section { background-color: #1a1a1a; padding: 40px 20px; display: flex; justify-content: center; }
+    .highlight-list { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: center; }
+    .highlight-item { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; }
+    .check-icon { width: 24px; height: 24px; background-color: #3DB2FF; border-radius: 50%; display: inline-block; position: relative; }
+    .check-icon::after { content: '✔'; color: white; font-size: 14px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .careers { position: relative; width: 100%; height: 70vh; background: url('Career%20Opportunities.png') no-repeat center center/cover; display: flex; align-items: center; justify-content: flex-end; }
+    .careers-overlay { width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: flex-end; padding-right: 60px; }
+    .careers-content { max-width: 500px; color: #fff; text-align: right; }
+    .careers-content h2 { font-size: 3rem; margin-bottom: 1rem; }
+    .careers-content p { font-size: 1.25rem; line-height: 1.6; }
+    .contact-section { background-color: #1a1a1a; padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .contact-left h2 { font-size: 1.5rem; margin-bottom: 10px; color: #3DB2FF; }
+    .contact-left p { margin-bottom: 20px; }
+    .contact-button { background-color: #FF7A59; color: white; padding: 10px 20px; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; text-decoration: none; }
+    .contact-center { text-align: center; font-size: 1.1rem; }
+    .contact-right img { height: 60px; }
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero h2 {
-        font-size: 1.2rem;
-      }
-      .solution-block {
-        max-width: 100%;
-      }
-      .contact-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-      }
-      .contact-left, .contact-center, .contact-right {
-        text-align: center;
-      }
+      .hero h1 { font-size: 2rem; }
+      .hero h2 { font-size: 1.2rem; }
+      .solution-block { max-width: 100%; }
+      .contact-section { flex-direction: column; text-align: center; gap: 20px; }
+      .contact-left, .contact-center, .contact-right { text-align: center; }
     }
   </style>
 </head>
@@ -271,11 +62,10 @@
   <section class="hero">
     <div class="hero-overlay">
       <h1>
-        Trusted Staffing<br>
-        for Federal<br>
-        Agencies
+        Intelligent Healthcare<br>
+        Workforce Solutions
       </h1>
-      <h2>Nationwide. Fast. Compliant.</h2>
+      <h2>For Federal & Enterprise Providers — Nationwide. Fast. Compliant. Data-Driven.</h2>
       <a href="#contact" class="cta-button">Contact Us</a>
     </div>
   </section>
@@ -284,32 +74,34 @@
     <div class="solution-wrapper">
       <div class="solution-columns">
         <div class="solution-block">
-          <h3>Healthcare & Clinical Staffing</h3>
-          <p>Full-spectrum medical staffing — any role, any setting, anywhere.</p>
+          <h3>AI-Driven Healthcare Staffing</h3>
+          <p>End-to-end workforce fulfillment powered by our proprietary <strong>Workforce Intelligence Platform SALIX</strong> — delivering the right talent, in the right place, at the right time.</p>
           <ul>
             <li>Physicians, RNs, LPNs, EMTs, Behavioral Health Providers</li>
             <li>Dental Techs, Lab Techs, Therapists, Pharmacists</li>
-            <li>Medical Admins, Schedulers, Coders, Intake & Support</li>
+            <li>Medical Administrators, Schedulers, Coders, Intake & Support</li>
             <li>Surge & Emergency Medical Teams (FEMA, VA, DoD, IHS, BOP, etc.)</li>
           </ul>
+          <p>Our platform streamlines <strong>credential verification, compliance tracking, and candidate matching</strong> — reducing onboarding timelines and ensuring operational readiness.</p>
         </div>
         <div class="solution-block">
-          <h3>Operational Support Services</h3>
-          <p>Staffing and managed support for mission-critical non-clinical roles — in-person and remote.</p>
+          <h3>Mission-Critical Support Services</h3>
+          <p>Integrated staffing and managed services for high-priority, non-clinical operations — available in-person or remote.</p>
           <ul>
             <li>Administrative & Intake Staff</li>
             <li>IT & Helpdesk Support</li>
             <li>Telehealth Coordination</li>
-            <li>Call Centers, Scheduling, Remote Workforces</li>
+            <li>Call Centers, Scheduling, Remote Workforce Management</li>
           </ul>
+          <p>Our tech-enabled workflows ensure security, efficiency, and 100% compliance with federal standards.</p>
         </div>
         <div class="solution-block">
-          <h3>Medical Logistics & Compliance Solutions</h3>
-          <p>Supporting the infrastructure of care delivery through logistics, training, and regulatory readiness.</p>
+          <h3>Integrated Healthcare Support Services</h3>
+          <p>Beyond workforce placement, GPG delivers the operational services that ensure healthcare missions stay fully supported — enabling agencies to work with a single, mission-aligned partner for critical needs.</p>
           <ul>
-            <li>DME & Medical Equipment Procurement</li>
-            <li>Medical Waste & Biohazard Disposal</li>
-            <li>Staff Credentialing & Compliance Training</li>
+            <li><strong>Medical Equipment & Supply Fulfillment</strong> – Rapid sourcing, procurement, and delivery of DME, clinical supplies, and specialty medical equipment to facilities nationwide.</li>
+            <li><strong>Regulatory & Biohazard Compliance</strong> – Full-service medical waste and biohazard disposal that meets all federal, state, and local requirements for safety and security.</li>
+            <li><strong>Digital Credentialing & Training</strong> – Technology-enabled verification, onboarding, and compliance training to ensure staff are cleared, qualified, and mission-ready from day one.</li>
           </ul>
         </div>
       </div>
@@ -318,16 +110,22 @@
   <section class="capitol-section">
     <div class="capitol-overlay">
       <div class="capitol-content">
-        Great Pacific Group is an SBA-certified small business specializing in medical and administrative staffing for the Federal Government. We are a one-stop shop for agencies that need to quickly and reliably fill both short- and long-term positions across the country. Our core mission is to support federal operations with qualified, cleared, and ready-to-work personnel — especially in healthcare and mission-critical support roles. We understand the urgency and complexity of government staffing needs, and we pride ourselves on delivering responsive, compliant solutions without compromise. Whether it’s a single urgent fill or an ongoing contract requiring full-time professionals, Great Pacific Group delivers. We partner with government clients and small business subcontractors to ensure coverage that’s fast, dependable, and tailored to the mission.
+        Great Pacific Group is an <strong>SBA-certified small business</strong> and an <strong>active SAM-registered government contractor</strong> specializing in healthcare workforce technology solutions. We combine <strong>deep federal staffing expertise</strong> with <strong>cutting-edge workforce management technology</strong> to help agencies and enterprise healthcare providers rapidly deploy qualified, cleared, and ready-to-work personnel. Our <strong>Workforce Intelligence Platform</strong> SALIX gives clients:
+        <ul>
+          <li>Real-time visibility into staffing pipelines and compliance status</li>
+          <li>Predictive analytics for workforce planning</li>
+          <li>Automated credential verification and onboarding workflows</li>
+        </ul>
+        Whether you need a <strong>single urgent placement</strong> or an <strong>enterprise-scale workforce deployment</strong>, we deliver speed, accuracy, and mission alignment — without compromise.
       </div>
     </div>
   </section>
   <section class="highlight-list-section">
     <div class="highlight-list">
-      <div class="highlight-item"><span class="check-icon"></span> SBA Small Bbusiness Certified</div>
-      <div class="highlight-item"><span class="check-icon"></span> Tech-Enabled</div>
+      <div class="highlight-item"><span class="check-icon"></span> SBA Small Business Certified</div>
+      <div class="highlight-item"><span class="check-icon"></span> Tech-Enabled Workforce Platform</div>
       <div class="highlight-item"><span class="check-icon"></span> Active SAM Registration</div>
-      <div class="highlight-item"><span class="check-icon"></span> Results Driven</div>
+      <div class="highlight-item"><span class="check-icon"></span> Fully compliant with federal security & privacy standards (HIPAA, FISMA)</div>
     </div>
   </section>
   <section class="careers">
@@ -335,9 +133,8 @@
       <div class="careers-content">
         <h2>Career Opportunities</h2>
         <p>
-          Great Pacific Group (GPG) is growing fast, and we're <br>
-          looking for qualified professionals to join our team<br>
-          and grow with us.
+          Join the GPG Talent Network and be part of a tech-powered healthcare workforce serving the nation.<br>
+          Our platform matches your skills, credentials, and preferences to mission-critical roles nationwide.
         </p>
         <a href="#contact" class="cta-button">Join Our Team</a>
       </div>
@@ -346,12 +143,12 @@
   <section class="contact-section" id="contact">
     <div class="contact-left">
       <h2>Let’s Talk</h2>
-      <p>We want to talk about how we can serve you!</p>
+      <p>We’re ready to discuss how we can support your mission.</p>
       <a href="mailto:sean@greatpacificgroup.co" class="contact-button">Contact Us</a>
     </div>
     <div class="contact-center">
       <p>Email: sean@greatpacificgroup.co</p>
-      <p>Phone: 615-640-2089</p>
+      <p>Phone: 540.227.0227</p>
     </div>
     <div class="contact-right">
       <img src="GPG%20LOGO%20V2.png" alt="Great Pacific Group Logo">
